@@ -1,4 +1,4 @@
-package pl.jakubkrys.lambda_expressions.lambda_expressions_introduction;
+package pl.jakubkrys.lambda_expressions.introduction;
 
 @FunctionalInterface
 public interface Validator {
