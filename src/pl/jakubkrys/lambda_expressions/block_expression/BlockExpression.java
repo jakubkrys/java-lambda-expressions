@@ -22,6 +22,17 @@ public class BlockExpression {
             System.out.print(i+",");
         }
         System.out.println();
-        System.out.println("-----  -----");
+        System.out.println("----- MULTIPLY -----");
+
+        Multiplication multiply = (tab) -> {
+            int multi = 1;
+            for (int i : tab){
+                multi *= i;
+            }
+            return multi;
+        };
+
+        int[] numbers2 = {2,4,6,8,10};
+        System.out.println(multiply.calculate(numbers2));
     }
 }
