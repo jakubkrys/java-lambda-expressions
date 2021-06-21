@@ -1,5 +1,7 @@
 package pl.jakubkrys.lambda_expressions.parametrized_functional_interface;
 
+import java.util.Arrays;
+
 public class OperationsMain {
     public static void main(String[] args) {
 
@@ -20,5 +22,16 @@ public class OperationsMain {
 
         System.out.println();
         System.out.println("----- GIMME TABLE -----");
+        MathOperations <Integer[],Integer> nLengthTable = (t) -> {
+          Integer[] table = new Integer[t];
+            for (int i = 0; i < t; i++) {
+                table[i] = i;
+            }
+            return table;
+        };
+
+        System.out.println(Arrays.toString(nLengthTable.operations(10)));
+        System.out.println(Arrays.toString(nLengthTable.operations(25)));
+        System.out.println(Arrays.toString(nLengthTable.operations(19)));
     }
 }
